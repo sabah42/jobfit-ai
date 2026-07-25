@@ -3,8 +3,24 @@ import os
 import pandas as pd 
 from dotenv import load_dotenv 
 load_dotenv()
-CLIENT_ID=os.getenv("CLIENT_ID")
-CLIENT_SECRET= os.getenv("CLIENT_SECRET")
+def lire_secret(nom):
+    valeur = os.getenv(nom)
+
+    if not valeur:
+        try:
+            valeur = st.secrets[nom]
+        except KeyError:
+            valeur = None
+
+    if not valeur:
+        raise ValueError(f"Le secret {nom} est absent.")
+
+    return str(valeur).strip()
+
+
+CLIENT_ID = lire_secret("CLIENT_ID")
+CLIENT_SECRET = lire_secret("CLIENT_SECRET")
+
 
 def get_token():
     token_url = "https://entreprise.pole-emploi.fr/connexion/oauth2/access_token?realm=/partenaire"
