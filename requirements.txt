@@ -5,3 +5,6 @@ streamlit
 pdfplumber
 reportlab
 geopy
+groq
+PyPDF2
+reportlab
