@@ -13,16 +13,16 @@
 
 - [Description du projet](#description-du-projet)
 - [Objectifs du projet](#objectifs-du-projet)
-- [Fonctionnalités](#Fonctionnalités)
-- [Aperçu de l'application](#Aperçu-de-l'application])
-- [Données et sources](#Données-et-sources)
-- [Technologies utilisées](#Technologies-utilisées)
-- [Structure du projet](#Structure-du-projet)
-- [Étapes principales](#Étapes-principales)
-- [Compétences développées](#Compétences-développées)
-- [Résultats](#Résultats)
-- [Démo](#Démo)
-- [Auteur](#Auteur)
+- [Fonctionnalités](#fonctionnalités)
+- [Aperçu de l'application](#aperçu-de-lapplication)
+- [Données et sources](#données-et-sources)
+- [Technologies utilisées](#technologies-utilisées)
+- [Structure du projet](#structure-du-projet)
+- [Étapes principales](#étapes-principales)
+- [Compétences développées](#compétences-développées)
+- [Résultats](#résultats)
+- [Démo](#démo)
+- [Auteur](#auteur)
 
 ---
 
@@ -84,33 +84,53 @@ L'objectif est d'automatiser plusieurs étapes du processus de candidature afin 
 
 ## Interface principale
 
-L'utilisateur importe son CV, choisit ses critères de recherche et visualise immédiatement les offres les plus pertinentes.
+L'utilisateur importe son CV, choisit son type de contrat ainsi que la distance maximale souhaitée. L'application récupère automatiquement les offres France Travail correspondant à son profil.
 
-![Interface principale](images/profil-offres.png)
+![Accueil](images/accueil.png)
 
 ---
 
 ## Détection automatique du profil
 
-Le CV est analysé afin d'extraire automatiquement les informations importantes utilisées pour le matching.
+Le CV est analysé afin d'extraire automatiquement :
 
-![Profil détecté](images/profil-extrait.png)
+- métier recherché
+- compétences
+- langues
+- expérience
+- localisation
 
----
-
-## Analyse de compatibilité
-
-Chaque offre est analysée afin d'identifier les compétences reconnues, les compétences manquantes ainsi que les recommandations d'amélioration.
-
-![Analyse IA](images/analyse-ia.png)
+![Profil détecté](images/profil-detecte.png)
 
 ---
 
-## Optimisation du CV
+## Analyse IA du matching
 
-L'application propose un diagnostic ATS et génère une nouvelle version optimisée du CV.
+Pour chaque offre, JobFit AI réalise une analyse complète comprenant :
 
-![CV optimisé](images/cv-optimise.png)
+- score de compatibilité
+- compétences détectées
+- compétences manquantes
+- mots-clés ATS
+- recommandations d'amélioration
+
+![Matching IA](images/matching-ia.png)
+
+---
+
+## Génération d'un CV optimisé
+
+Grâce au LLM, une nouvelle version du CV est automatiquement générée afin d'améliorer les chances de passer les filtres ATS.
+
+![CV optimisé](images/cv-optimization.png)
+
+---
+
+## Téléchargement du CV
+
+Le CV optimisé peut ensuite être téléchargé directement au format PDF.
+
+![Téléchargement CV](images/generated-cv.png)
 
 ---
 
